@@ -4,7 +4,8 @@
 
 This is a quick solution to the engineering skill Assessment provided by QuickNode.
 
-Stack used:
+
+## Stack used:
 
 - NextJS
 - Typescript
@@ -13,6 +14,7 @@ Stack used:
 - TailwindCSS
 - Apollo for Graphql query
 
+For this assignment I built an app using nextjs and redux for state management. It uses Apollo to make GraphQL requests to icy tools. This happens inside of an async thunk and the results are saved in a redux reducer. There is also a redux reducer for wallet connection status. My next steps were to implement pagination and a UI for the user to select query parameters such as sort order. This would involve changing the shape of the state significantly.
 ## To run:
 In root folder: 
 
@@ -34,12 +36,12 @@ Going in to as much detail as you want, describe how you would build a system th
   I have been impressed by GraphQL the few times I have been exposed to it; I like the fact that it lets the client choose what data it wants without any additional backend changes. Alternatively, I would set up rest-like http endpoints using express
 
 ### #3 Scales to handle thousands of requests per second
-  Scaling up can sometimes be harder than getting off the ground in the first place, but with the right setup it can be done smoothly. Some things I'd look to implement:
+ - Scaling up can sometimes be harder than getting off the ground in the first place, but with the right setup it can be done smoothly. Some things I'd look to implement:
     - For data that comes from an external source, use a caching layer so that we can serve requests for the same data much faster, and at first expire the cache naively based on TTL. Redis is my go-to solution for this
     - For data in our db, make sure everything is configured for efficiency, like ensuring the appropriate indexes are set up to improve lookup times, and setting up read replication and only read from replicas
 
 ### #4 Provides real-time updates to clients as new data is available
-For real time updates I'd use websockets, so we can push messages to the client instructing it to fetch new data or just push new data directly
+ - For real time updates I'd use websockets, so we can push messages to the client instructing it to fetch new data or just push new data directly
 # QN-Assessment
 
 
